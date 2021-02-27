@@ -1,0 +1,21 @@
+@startuml
+class Product <<interace>>
+{
+	+doStuff()
+}
+class Creator
+{
+    -someOperations()
+    +Product createProduct()
+}
+Creator...>Product
+class ConcreteCreatorA
+class ConcreteCreatorB
+class ConcreteProductA
+class ConcreteProductB
+
+Creator<|--ConcreteCreatorA
+Creator<|--ConcreteCreatorB
+Product<|--ConcreteProductA
+Product<|--ConcreteProductB
+@enduml
